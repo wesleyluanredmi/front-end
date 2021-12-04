@@ -36,10 +36,11 @@ img {
     display: block;
 }
 
+/*********************************************************/
+/* btn  Menu mobile
+/*********************************************************/
 
-/*********************************************************/
-/*   Menu
-/*********************************************************/
+
 
 .menu-bg{
     background-color: var(--color-1);
@@ -74,6 +75,41 @@ img {
 }
 
 /*********************************************************/
+/*   Menu
+/*********************************************************/
+#btn-mobile{
+    display: none;
+}
+
+@media (max-width: 700px) {
+    #btn-mobile{
+        display: block;
+    }
+    #nav__list{
+        display: none;
+        position: absolute;
+        width: 50%;
+        top: 60px;
+        right: 0px;
+        background-color: var(--color-1);
+        border: 2px solid rgba(0, 0, 0, 0.267);
+        z-index: 1000;
+
+    }
+    #nav.active #nav__list{
+        display: block;
+        height: 100vh;
+    }
+    #nav__list .nav__link{
+        display: block;
+        border-bottom: 1px solid var(--color-3);
+        padding: 10px;
+    }
+    
+
+}
+
+/*********************************************************/
 /*   header
 /*********************************************************/
 .intro {
@@ -102,6 +138,10 @@ img {
 }
 .sobre-c__img{
     flex: 1 1 450px;
+}
+.sobre-c__img img{
+    margin: 0 auto;
+
 }
 /*********************************************************/
 /*   main
